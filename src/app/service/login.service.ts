@@ -22,8 +22,8 @@ export class LoginService {
       .pipe(
         map(
           data => {
-            sessionStorage.setItem(USER, data.username);
-            sessionStorage.setItem(ROLE, data.role);
+            sessionStorage.setItem(USER, username);
+            sessionStorage.setItem(ROLE, role);
             return data;
           }
         )
@@ -43,6 +43,7 @@ export class LoginService {
   logout() {
     // sessionStorage.clear();
     sessionStorage.removeItem(USER);
+    sessionStorage.removeItem(ROLE);
   }
 
   isUserLoggedIn(): boolean {

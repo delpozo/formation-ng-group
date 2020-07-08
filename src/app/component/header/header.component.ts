@@ -9,11 +9,13 @@ import {LoginService} from '../../service/login.service';
 export class HeaderComponent implements OnInit {
 
   role: string = '';
+  isLogged: boolean = false;
 
   constructor(private loginService: LoginService) {
   }
 
   ngOnInit(): void {
+    this.isLogged = this.loginService.isUserLoggedIn();
     this.role = this.loginService.getRole();
   }
 
