@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginService} from '../../service/login.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'header-navbar',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  role: string = '';
+  isLogged: boolean = false;
+
+  constructor(private loginService: LoginService) {
+  }
 
   ngOnInit(): void {
+    this.isLogged = this.loginService.isUserLoggedIn();
+    this.role = this.loginService.getRole();
   }
 
 }
