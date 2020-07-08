@@ -118,25 +118,33 @@
       "id": 1,
       "motif": "Première consultation",
       "plage": "2020-07-30",
-      "duree": "4"
+      "duree": "4",
+      "praticien": 2,
+      "patient": 3
     },
     {
       "id": 2,
       "motif": "Consultation de suivi",
       "plage": "2020-08-02",
-      "duree": 2
+      "duree": 2,
+      "praticien": 2,
+      "patient": 3
     },
     {
       "id": 3,
       "motif": "Détartrage",
       "plage": "2020-08-10",
-      "duree": 3
+      "duree": 3,
+      "praticien": 2,
+      "patient": 3
     },
     {
       "id": 4,
       "motif": "Urgence dentaire",
       "plage": "2020-07-08",
-      "duree": 2
+      "duree": 2,
+      "praticien": 2,
+      "patient": 3
     }
   ]
 }
