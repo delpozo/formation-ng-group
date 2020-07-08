@@ -29,7 +29,7 @@ export class PraticienHttpService {
   }
 
   update(praticien: Praticien) {
-    return this.http.put<Praticiencien>('http://localhost:3000/praticiens/' + praticien.id, praticien).subscribe(resp => {
+    return this.http.put<Praticien>('http://localhost:3000/praticiens/' + praticien.id, praticien).subscribe(resp => {
       this.load();
     }, error => console.log(error));
   }
@@ -41,8 +41,9 @@ export class PraticienHttpService {
   }
 
   load() {
-    this.http.get<Array<Formateur>>('http://localhost:3000/formateurs').subscribe(resp => {
-      this.formateurs = resp;
+    this.http.get<Array<Praticien>>('http://localhost:3000/praticien').subscribe(resp => {
+      this.praticiens = resp;
+      console.log(JSON.stringify(resp));
     }, error => console.log(error));
   }
 }

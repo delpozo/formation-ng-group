@@ -9,9 +9,9 @@ export class Praticien extends User {
 
 
 
-  constructor(id?: number, username?: string, password?: string, nom?: string, prenom?: string,
+  constructor(id?: number, username?: string, pwd?: string, nom?: string, prenom?: string,
               role?: string, specialite?: string, adresse?: Adresse, tel?: number, tarif?: number) {
-    super(id, username, password, nom, prenom, role);
+    super(id, username, pwd, nom, prenom, role);
     this.specialite = specialite;
     this.adresse = adresse;
     this.tarif = tarif;

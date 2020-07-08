@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { PraticienComponent } from './praticien/praticien.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -29,35 +29,25 @@
           {{praticien.adresse?.pays}}</td>
         <td>
           <div class="btn-group btn-group-sm">
-            <a class="btn btn-info text-light" data-toggle="modal" data-target="#myModal" (click)="modal(praticien.id)"><i class="fa fa-bars"></i></a>
-            <a class="btn btn-primary text-light" (click)="Annuler(praticien.id)"><i class="fa fa-remove " ></i></a>
-            <a class="btn btn-danger text-light" (click)="Modifier(praticien.id)"><i class="fa fa-edit " ></i></a>
+
+            <a class="btn btn-primary text-light" (click)="remove(praticien.id)"><i class="fa fa-remove " ></i></a>
+            <a class="btn btn-danger text-light" (click)="edit(praticien.id)"><i class="fa fa-edit " ></i></a>
           </div>
         </td>
       </tr>
       </tbody>
     </table>
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-
-          <!-- Modal Header -->
 
 
 
 
 
 
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
 
-  <div class="card mt-3" *ngIf="PraticienForm!=null">
+  <div class="card mt-3" *ngIf="praticienForm!=null">
     <div class="card-header bg-info text-white">
       <h3>Edition du praticien</h3>
     </div>

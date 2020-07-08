@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Praticien} from '../model/praticien';
+import {Adresse} from "../model/adresse";
+import {PraticienHttpService} from "../service/praticien-http.service";
 
 @Component({
   selector: 'app-praticien',
@@ -9,28 +11,28 @@ import {Praticien} from '../model/praticien';
 export class PraticienComponent implements OnInit {
   praticienForm: Praticien = null;
 
-  praticienModal: Praticien = null;
 
 
 
-
-  constructor( private praticienService :praticienHttpService) { }
+  constructor(private praticienHttpService:PraticienHttpService ) {
+  }
 
 
   ngOnInit(): void {
+    this.list();
   }
 
   list(): Array<Praticien> {
-    return this.praticienService.findAll();
+    return this.praticienHttpService.findAll();
   }
 
   add() {
-    this.praticienForm= new Praticien();
+    this.praticienForm = new Praticien();
     this.praticienForm.adresse = new Adresse();
   }
 
   edit(id: number) {
-    this.praticienService.find(id).subscribe(resp => {
+    this.praticienHttpService.find(id).subscribe(resp => {
       this.praticienForm = resp;
       if (!this.praticienForm.adresse) {
         this.praticienForm.adresse = new Adresse();
@@ -39,28 +41,20 @@ export class PraticienComponent implements OnInit {
 
   }
 
-  modal(id: number) {
-    this.praticienFormService.find(id).subscribe(resp => {
-      this.praticienModal = resp;
-    }, error => console.log(error));
-  }
 
-  saveModal() {
-    this.praticienService.update(this.praticienModalModal);
-  }
 
   save() {
-    if (this.praticienFormForm.id) {
-      this.praticienService.update(this.pratcienForm);
+    if (this.praticienForm.id) {
+      this.praticienHttpService.update(this.praticienForm);
     } else {
-      this.praticienService.create(this.praticienFormForm);
+      this.praticienHttpService.create(this.praticienForm);
     }
 
     this.cancel();
   }
 
   remove(id: number) {
-    this.praticienService.remove(id);
+    this.praticienHttpService.remove(id);
   }
 
   cancel() {
