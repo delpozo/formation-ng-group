@@ -1,142 +1,146 @@
 {
-  "patient": [
+  "patient":[
     {
-      "id": 1,
-      "nom": "Bouajla",
-      "prenom": "Bochra",
-      "username": "BochraB",
-      "tel": "0689598552",
-      "email": "bouajla.bochra@gmail.com",
-      "pwd": "test1.",
-
+      "id":1,
+      "nom":"Bouajla",
+      "prenom":"Bochra",
+      "username":"bochra",
+      "pwd":"bouajla",
+      "role":"patient"
     },
     {
-      "id": 2,
-      "nom": "Bahri",
-      "prenom": "Saif",
-      "username": "BahriS",
-      "tel": "0689598553",
-      "email": "bahri.s@gmail.com",
-      "pwd": "test2.",
+      "id":2,
+      "nom":"Bahri",
+      "prenom":"Sayf",
+      "username":"sayf",
+      "pwd":"bahri",
+      "role":"patient"
     },
     {
-      "id": 3,
-      "nom": "Abdejlil",
-      "prenom": "Skander",
-      "username": "AbdejlilS",
-      "tel": "0689598554",
-      "email": "abdejlil.s@gmail.com",
-      "pwd": "test3.",
-    }
-{
-      "id": 4,
-      "nom": "moreau",
-      "prenom": "virgil",
-      "username": "moreauV",
-      "tel": "0689598559",
-      "email": "moreau.v@gmail.com",
-      "pwd": "test4.",
+      "id":3,
+      "nom":"Abdejlil",
+      "prenom":"Skander",
+      "username":"skander",
+      "pwd":"abdeljelil",
+      "role":"patient"
+    },
+    {
+      "id":4,
+      "nom":"Moreau",
+      "prenom":"Virgil",
+      "username":"virgil",
+      "pwd":"moreau",
+      "role":"patient"
     }
   ],
-  "praticien": [
+  "praticien":[
     {
-      "id": 1,
-      "nom": "sulvan",
-      "prenom": "thierry",
-      "tel": "0125252525",
-      "specialite": "Chirurgien-dentiste",
-      "tarif": "30 euro",
-      "adresse": {
-        "rue": "3 Boulevard Charles de Gaulle,",
-        "complement": "",
-        "codePostal": " 92700 ",
-        "ville": "Paris",
-        "pays": "France"
-      },
-      
-{
-      "id": 2,
-      "nom": "Aaserud",
-      "prenom": "mia",
-      "tel": "0125252526",
-      "specialite": "Ostéopathe",
-      "tarif": "30 euro",
-      "adresse": {
-        "rue": "2 rue Douet Garnier,",
-        "complement": "",
-        "codePostal": " 75000 ",
-        "ville": "Paris",
-        "pays": "France"
-      },
-  
-
-{
-      "id": 3,
-      "nom": "Ababei",
-      "prenom": "philipe",
-      "tel": "0125252527",
-      "specialite": "Psychiatre",
-      "tarif": "60 euro",
-      "adresse": {
-        "rue": "29 Rue D Avron,",
-        "complement": "",
-        "codePostal": " 75020 ",
-        "ville": "Paris",
-        "pays": "France"
-      },
-
-{
-      "id": 4,
-      "nom": "ABAD",
-      "prenom": "richard",
-      "tel": "0125252528",
-      "specialite": "Masseur-kinésithérapeute",
-      "tarif": "60 euro",
-      "adresse": {
-        "rue": "16 Avenue de la Résistance,",
-        "complement": "",
-        "codePostal": " 77500 ",
-        "ville": "Paris",
-        "pays": "France"
-      },
+      "id":1,
+      "nom":"Sulvan",
+      "prenom":"Thierry",
+      "username":"thierry",
+      "pwd":"sulvan",
+      "tel":"0125252525",
+      "specialite":"Chirurgien-dentiste",
+      "tarif":"30",
+      "role":"praticien",
+      "adresse":{
+        "rue":"3 Boulevard Charles de Gaulle,",
+        "complement":"",
+        "codePostal":" 92700 ",
+        "ville":"Paris",
+        "pays":"France"
+      }
+    },
+    {
+      "id":2,
+      "nom":"Aaserud",
+      "prenom":"Mia",
+      "username":"mia",
+      "pwd":"aaserud",
+      "tel":"0125252526",
+      "specialite":"Ostéopathe",
+      "tarif":"30",
+      "role":"praticien",
+      "adresse":{
+        "rue":"2 rue Douet Garnier,",
+        "complement":"",
+        "codePostal":" 75000 ",
+        "ville":"Paris",
+        "pays":"France"
+      }
+    },
+    {
+      "id":3,
+      "nom":"Ababei",
+      "prenom":"philipe",
+      "username":"philipe",
+      "pwd":"ababei",
+      "tel":"0125252527",
+      "specialite":"Psychiatre",
+      "tarif":"60",
+      "role":"praticien",
+      "adresse":{
+        "rue":"29 Rue D Avron,",
+        "complement":"",
+        "codePostal":" 75020 ",
+        "ville":"Paris",
+        "pays":"France"
+      }
+    },
+    {
+      "id":4,
+      "nom":"Abad",
+      "prenom":"Richard",
+      "username":"richard",
+      "pwd":"abad",
+      "tel":"0125252528",
+      "specialite":"Masseur-kinésithérapeute",
+      "tarif":"60",
+      "role":"praticien",
+      "adresse":{
+        "rue":"16 Avenue de la Résistance,",
+        "complement":"",
+        "codePostal":" 77500 ",
+        "ville":"Paris",
+        "pays":"France"
+      }
+    }
   ],
-  "admin": [
+  "admin":[
     {
-      "id": 1,
-      "nom": "admin1",
-      "prenom": "admin1",
-      "email": "administrateur@gmail.com",
-      "role": "administrateur",
+      "id":1,
+      "nom":"Doe",
+      "prenom":"John",
+      "username":"admin",
+      "pwd":"admin",
+      "role":"admin"
     }
-  ]
-"RDV": [
+  ],
+  "RDV":[
     {
-      "id": 1,
-      "motif": "premiére consultation",
-      "plage": "2020-07-30",
-      "duree": "13:30",
-      
-    }
-{
-      "id": 2,
-      "motif": "consultation de suivie",
-      "plage": "2020-08-02",
-      "duree": "10:00",
-      
-    }
-{
-      "id": 3,
-      "motif": "detartrage",
-      "plage": "2020-08-10",
-      "duree": "11:15",
-      
-    }
-{
-      "id": 4,
-      "motif": "urgence dentaire",
-      "plage": "2020-07-08",
-      "duree": "11:15",
-      
+      "id":1,
+      "motif":"Première consultation",
+      "plage":"2020-07-30",
+      "duree":"4"
+    },
+    {
+      "id":2,
+      "motif":"Consultation de suivi",
+      "plage":"2020-08-02",
+      "duree":2
+    },
+    {
+      "id":3,
+      "motif":"Détartrage",
+      "plage":"2020-08-10",
+      "duree":3
+    },
+    {
+      "id":4,
+      "motif":"Urgence dentaire",
+      "plage":"2020-07-08",
+      "duree":2
     }
   ]
 }
