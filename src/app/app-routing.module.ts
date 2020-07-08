@@ -6,6 +6,7 @@ import {DetailPatientComponent} from './component/detail-patient/detail-patient.
 import {LoginComponent} from './component/login/login.component';
 import {PraticienComponent} from "./praticien/praticien.component";
 import {RendezVousComponent} from './component/rendez-vous/rendez-vous.component';
+import {DetailParticienComponent} from './component/detail-particien/detail-particien.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
