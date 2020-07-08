@@ -41,9 +41,9 @@ export class LoginService {
   }
 
   logout() {
-    // sessionStorage.clear();
-    sessionStorage.removeItem(USER);
-    sessionStorage.removeItem(ROLE);
+    sessionStorage.clear();
+    // sessionStorage.removeItem(USER);
+    // sessionStorage.removeItem(ROLE);
   }
 
   isUserLoggedIn(): boolean {
