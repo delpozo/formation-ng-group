@@ -15,10 +15,8 @@
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
 
       <label class="mt-2" for="role">Vous êtes ?</label>
-      <select class="form-control col-md-5 ml-5" id="role">
-        <option value="admin">Administrateur</option>
-        <option value="praticien">Praticien</option>
-        <option selected value="patient">Pacient</option>
+      <select class="form-control col-md-5 ml-5" name="roles" #roles="ngModel" [(ngModel)]="role">
+        <option *ngFor="let role of Roles" [value]="role.role">{{role.role}}</option>
       </select>
 
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="doLogin()">

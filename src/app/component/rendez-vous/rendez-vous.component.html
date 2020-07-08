@@ -1,1 +1,75 @@
-<p>rendez-vous works!</p>
+<div class="card mt-3">
+  <div class="card-header bg-info text-white">
+    <h2>Liste des Rdv</h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Motif</th>
+        <th>Plage Horaire</th>
+        <th>Durée</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rdv of list()">
+        <td>{{rdv.id}}</td>
+        <td>{{rdv.motif | uppercase}}</td>
+        <td>{{rdv.plage | date:'y-m-d' }}</td>
+        <td>{{rdv.duree}}</td>
+        <td>
+          <div class="btn-group btn-group-sm">
+
+            <a class="btn btn-primary text-light" (click)="remove(rdv.id)"><i class="fa fa-remove " ></i></a>
+            <a class="btn btn-danger text-light" (click)="edit(rdv.id)"><i class="fa fa-edit " ></i></a>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!--    start only admin block-->
+    <div class="card-footer">
+      <!-- only admin
+       <a class="btn btn-success btn-lg" (click)="add()">-->
+      <i class="fa fa-plus"></i>
+      <!--    </a>-->
+    </div>
+    <!--    end only admin block-->
+  </div>
+</div>
+<div class="card mt-3" *ngIf="rdvForm!=null">
+  <div class="card-header bg-info text-white">
+    <h3>Edition du Rdv</h3>
+  </div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="motif">Motif:</label>
+      <input type="text" class="form-control" id="motif" [(ngModel)]="rdvForm.motif">
+    </div>
+    <div class="form-group">
+      <label for="plage">Plage:</label>
+      <input type="text" class="form-control" id="plage" [(ngModel)]="rdvForm.plage">
+    </div>
+    <div class="form-group">
+      <label for="duree">Durée:</label>
+      <input type="text" class="form-control" id="duree" [(ngModel)]="rdvForm.duree">
+    </div>
+
+    <div class="card-footer">
+      <div class="btn-group btn-group-lg float-right">
+        <a class="btn btn-success text-light" (click)="save()">
+          <i class="fa fa-check"></i>
+        </a>
+        <a class="btn btn-warning text-light" (click)="cancel()">
+          <i class="fa fa-undo"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!--end edit form-->
+</div>

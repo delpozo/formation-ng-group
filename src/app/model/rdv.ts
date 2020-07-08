@@ -1,13 +1,15 @@
 export class Rdv {
   id: number;
   motif: string;
-  plageHoraire: Date;
+  plage: Date;
   duree: number;
+  patient: number;
+  praticien: number;
 
-  constructor(id: number, motif: string, plageHoraire: Date, duree: number) {
+  constructor(id?: number, motif?: string, plage?: Date, duree?: number) {
     this.id = id;
     this.motif = motif;
-    this.plageHoraire = plageHoraire;
+    this.plage = plage;
     this.duree = duree;
   }
 }

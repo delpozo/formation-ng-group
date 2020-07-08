@@ -24,9 +24,11 @@ export class LoginService {
       .pipe(
         map(
           data => {
+            let id = data[0].id;
+            console.log(data);
             sessionStorage.setItem(USER, username);
             sessionStorage.setItem(ROLE, role);
-            sessionStorage.setItem(ID, `${data.id}`);
+            sessionStorage.setItem(ID, id);
             return data;
           }
         )

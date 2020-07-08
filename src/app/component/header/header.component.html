@@ -16,11 +16,19 @@
       </li>
       <!--      ngIf role Patient   -->
       <li class="nav-item" *ngIf="role == 'patient'">
-        <a class="nav-link" [routerLink]="['paticien']">
+        <a class="nav-link" [routerLink]="['rdv']">
           <i class="fa fa-calendar-minus">
             <span class="badge badge-danger">11</span>
           </i>
           Mes Rendez-Vous
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="role == 'patient'">
+        <a class="nav-link" [routerLink]="['/patient']">
+          <i class="fa fa-calendar-minus">
+            <span class="badge badge-danger">11</span>
+          </i>
+          Liste Patients
         </a>
       </li>
       <!--      ngIf role Praticien -->

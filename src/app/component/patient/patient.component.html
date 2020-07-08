@@ -9,25 +9,23 @@
         <th>#</th>
         <th>Nom</th>
         <th>Prénom</th>
-        <th></th>
+        <th>Username</th>
+        <th>Role</th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td class="w-5">#</td>
-        <td></td>
-        <td></td>
-        <td></td>
-
+      <tr *ngFor="let patient of list()">
+        <td>{{patient.id}}</td>
+        <td>{{patient.nom | uppercase}}</td>
+        <td>{{patient.prenom}}</td>
+        <td>{{patient.username}}</td>
+        <td>{{patient.role}}</td>
         <td>
           <div class="btn-group btn-group-sm">
-<!--            only  admin-->
-            <a class="btn btn-primary text-light"><i class="fa fa-edit"></i></a>
-            <a class="btn btn-danger text-light" ><i class="fa fa-trash"></i></a>
-            <!--           end only admin-->
-            <!-- start only paticien-->
-            <a class="btn btn-info text-light" ><i class="fa fa-calendar-minus"></i></a>
-            <!--           end only admin-->
+
+            <a class="btn btn-primary text-light" *ngIf="role == 'admin' " (click)="remove(patient.id)"><i class="fa fa-remove " ></i></a>
+            <a class="btn btn-danger text-light"  *ngIf="role == 'admin' " (click)="edit(patient.id)"><i class="fa fa-edit " ></i></a>
+            <a class="btn btn-danger text-light" (click)="addRdv(patient.id)"><i class="fa fa-ad " ></i></a>
           </div>
         </td>
       </tr>
@@ -45,38 +43,74 @@
 </div>
 <!--start admin edit patient form-->
 
-<!--  <div class="card mt-3" *ngIf="patientForm!=null">-->
-<!--    <div class="card-header bg-info text-white">-->
-<!--      <h3>Edition du patient</h3>-->
-<!--    </div>-->
+  <div class="card mt-3" *ngIf="patientForm!=null">
+    <div class="card-header bg-info text-white">
+      <h3>Edition du patient</h3>
+    </div>
 
-<!--    <div class="card-body">-->
+    <div class="card-body">
 
-<!--      <div class="form-group">-->
-<!--        <label for="nom">Nom:</label>-->
-<!--        <input type="text" class="form-control" id="nom" [(ngModel)]="patientForm.nom">-->
-<!--      </div>-->
-<!--      <div class="form-group">-->
-<!--        <label for="prenom">Prénom:</label>-->
-<!--        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.prenom">-->
-<!--      </div>-->
-<!--      <div class="form-group">-->
-<!--        <label for="username">username:</label>-->
-<!--        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.username">-->
-<!--      </div>-->
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="patientForm.nom">
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom:</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.prenom">
+      </div>
+      <div class="form-group">
+        <label for="username">username:</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.username">
+      </div>
 
-<!--    <div class="card-footer">-->
-<!--      <div class="btn-group btn-group-lg float-right">-->
-<!--        <a class="btn btn-success text-light" (click)="save()">-->
-<!--          <i class="fa fa-check"></i>-->
-<!--        </a>-->
-<!--        <a class="btn btn-warning text-light" (click)="cancel()">-->
-<!--          <i class="fa fa-undo"></i>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="card-footer">
+      <div class="btn-group btn-group-lg float-right">
+        <a class="btn btn-success text-light" (click)="save()">
+          <i class="fa fa-check"></i>
+        </a>
+        <a class="btn btn-warning text-light" (click)="cancel()">
+          <i class="fa fa-undo"></i>
+        </a>
+      </div>
+    </div>
 
-<!--  </div>-->
+  </div>
 
 <!--end edit form-->
-<!--  </div>-->
+  </div>
+<div class="card mt-3" *ngIf="rdvForm!=null">
+  <div class="card-header bg-info text-white">
+    <h3>Ajouter du Rdv</h3>
+  </div>
+
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="motif">Motif:</label>
+      <input type="text" class="form-control" id="motif" [(ngModel)]="rdvForm.motif">
+    </div>
+    <div class="form-group">
+      <label for="plage">Plage:</label>
+      <input type="text" class="form-control" id="plage" [(ngModel)]="rdvForm.plage">
+    </div>
+    <div class="form-group">
+      <label for="duree">Durée:</label>
+      <input type="text" class="form-control" id="duree" [(ngModel)]="rdvForm.duree">
+    </div>
+
+    <div class="card-footer">
+      <div class="btn-group btn-group-lg float-right">
+        <a class="btn btn-success text-light" (click)="saveRdv()">
+          <i class="fa fa-check"></i>
+        </a>
+        <a class="btn btn-warning text-light" (click)="cancel()">
+          <i class="fa fa-undo"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!--end edit form-->
+</div>
+
