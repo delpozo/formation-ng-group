@@ -1,4 +1,5 @@
 <div class="wrapper fadeInDown">
+  <div class="alert alert-warning" *ngIf="errorMessage != ''">{{ errorMessage }}</div>
   <div id="formContent">
     <!-- Tabs Titles -->
 
@@ -15,10 +16,10 @@
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
 
       <label class="mt-2" for="role">Vous êtes ?</label>
-      <select class="form-control col-md-5 ml-5" id="role">
+      <select name="role" class="form-control col-md-5 ml-5" id="role" [(ngModel)]="role">
         <option value="admin">Administrateur</option>
         <option value="praticien">Praticien</option>
-        <option selected value="patient">Pacient</option>
+        <option selected value="patient">Patient</option>
       </select>
 
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="doLogin()">
