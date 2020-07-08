@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ID, LoginService, ROLE, USER} from '../../service/login.service';
 import {Router} from '@angular/router';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
       { role: 'praticien'}
     ];
   user: User = null;
+  errorMessage: string = '';
 
   constructor(private loginService: LoginService, private router: Router) {
   }
@@ -33,10 +35,14 @@ export class LoginComponent implements OnInit {
         console.log('userrrrrrrr = ' + this.user.username);
         console.log('iddd = ' + this.user.id);
 
-        if (this.role === 'admin') {
-          this.router.navigate(['/home']);
-        } else
-          this.router.navigate(['/'+this.user.role]);
+        if (data.length === 0) {
+          this.errorMessage = 'Login ou mot de passe incorrecte';
+        } else {
+          if (this.role === 'admin') {
+            this.router.navigate(['/home']);
+          } else
+            this.router.navigate(['/' + this.user.role]);
+        }
         /*if (this.role === 'admin') {
            this.loginService.findAdminByIdAndRole(this.user.id, this.role).subscribe(
              data => {

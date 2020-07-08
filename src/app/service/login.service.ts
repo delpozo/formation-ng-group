@@ -30,7 +30,7 @@ export class LoginService {
             console.log(data);
             sessionStorage.setItem(USER, username);
             sessionStorage.setItem(ROLE, role);
-            sessionStorage.setItem(ID, id);
+            sessionStorage.setItem(ID, id.toString());
             return data;
           }
         )
