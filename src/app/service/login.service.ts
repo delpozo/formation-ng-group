@@ -3,9 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {User} from '../model/user';
 import {map} from 'rxjs/operators';
+import {Admin} from '../model/admin';
 
 export const USER = 'userAuthenticated';
 export const ROLE = 'role';
+export const ID = 'id';
 
 @Injectable({
   providedIn: 'root'
@@ -24,10 +26,15 @@ export class LoginService {
           data => {
             sessionStorage.setItem(USER, username);
             sessionStorage.setItem(ROLE, role);
+            sessionStorage.setItem(ID, `${data.id}`);
             return data;
           }
         )
       );
+  }
+
+  findAdminByIdAndRole(id: number, role: string): Observable<Admin> {
+    return this.httpClient.get<Admin>(`${this.baseUrl}${role}/${id}?role=${role}`);
   }
 
   getUserAuthenticated() {
@@ -37,6 +44,12 @@ export class LoginService {
   getRole() {
     if (this.getUserAuthenticated()) {
       return sessionStorage.getItem(ROLE);
+    }
+  }
+
+  getId() {
+    if (this.getUserAuthenticated()) {
+      return sessionStorage.getItem(ID);
     }
   }
 
