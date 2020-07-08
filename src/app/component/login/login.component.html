@@ -14,14 +14,12 @@
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="username">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
 
-        <label for="role">vous êtes ?</label>
-        <select  class="form-control " id="role">
-
-          <option value="admin">Administrateur </option>
-          <option value="praticien">praticien</option>
-          <option selected value="patient">Pacient</option>
-
-        </select>
+      <label class="mt-2" for="role">Vous êtes ?</label>
+      <select class="form-control col-md-5 ml-5" id="role">
+        <option value="admin">Administrateur</option>
+        <option value="praticien">Praticien</option>
+        <option selected value="patient">Pacient</option>
+      </select>
 
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="doLogin()">
     </form>
