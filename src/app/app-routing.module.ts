@@ -5,6 +5,7 @@ import {PatientComponent} from './component/patient/patient.component';
 import {DetailPatientComponent} from './component/detail-patient/detail-patient.component';
 import {LoginComponent} from './component/login/login.component';
 import {PraticienComponent} from "./praticien/praticien.component";
+import {DetailParticienComponent} from './component/detail-particien/detail-particien.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'patient/:id', component: DetailPatientComponent},
   {path: 'login', component: LoginComponent},
   {path: 'praticien', component: PraticienComponent},
-  {path: 'praticien/:id', component: DetailPatientComponent},
+  {path: 'praticien/:id', component: DetailParticienComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
