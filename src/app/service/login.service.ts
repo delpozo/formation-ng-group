@@ -26,11 +26,10 @@ export class LoginService {
       .pipe(
         map(
           data => {
-            let id = data[0].id;
-            console.log(data);
-            sessionStorage.setItem(USER, username);
-            sessionStorage.setItem(ROLE, role);
-            sessionStorage.setItem(ID, id.toString());
+            if (data.length !== 0) {
+              sessionStorage.setItem(USER, username);
+              sessionStorage.setItem(ROLE, role);
+            }
             return data;
           }
         )

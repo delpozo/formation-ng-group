@@ -15,9 +15,9 @@
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="username">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
 
-      <label class="mt-2" for="role">Vous êtes ?</label>
+      <label class="mt-2">Vous êtes ?</label>
       <select class="form-control col-md-5 ml-5" name="roles" #roles="ngModel" [(ngModel)]="role">
-        <option *ngFor="let role of Roles" [value]="role.role">{{role.role}}</option>
+        <option *ngFor="let role of Roles" [value]="role.role">{{ role.role }}</option>
       </select>
 
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="doLogin()">
