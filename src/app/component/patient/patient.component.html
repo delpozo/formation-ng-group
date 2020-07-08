@@ -1,1 +1,82 @@
-<p>patient works!</p>
+<div class="card mt-3">
+  <div class="card-header bg-info text-white">
+    <h2>Liste des Patients</h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="w-5">#</td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td>
+          <div class="btn-group btn-group-sm">
+<!--            only  admin-->
+            <a class="btn btn-primary text-light"><i class="fa fa-edit"></i></a>
+            <a class="btn btn-danger text-light" ><i class="fa fa-trash"></i></a>
+            <!--           end only admin-->
+            <!-- start only paticien-->
+            <a class="btn btn-info text-light" ><i class="fa fa-calendar-minus"></i></a>
+            <!--           end only admin-->
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+<!--    start only admin block-->
+      <div class="card-footer">
+    <!-- only admin
+     <a class="btn btn-success btn-lg" (click)="add()">-->
+      <i class="fa fa-plus"></i>
+<!--    </a>-->
+  </div>
+    <!--    end only admin block-->
+  </div>
+</div>
+<!--start admin edit patient form-->
+
+<!--  <div class="card mt-3" *ngIf="patientForm!=null">-->
+<!--    <div class="card-header bg-info text-white">-->
+<!--      <h3>Edition du patient</h3>-->
+<!--    </div>-->
+
+<!--    <div class="card-body">-->
+
+<!--      <div class="form-group">-->
+<!--        <label for="nom">Nom:</label>-->
+<!--        <input type="text" class="form-control" id="nom" [(ngModel)]="patientForm.nom">-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="prenom">Prénom:</label>-->
+<!--        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.prenom">-->
+<!--      </div>-->
+<!--      <div class="form-group">-->
+<!--        <label for="username">username:</label>-->
+<!--        <input type="text" class="form-control" id="prenom" [(ngModel)]="patientForm.username">-->
+<!--      </div>-->
+
+<!--    <div class="card-footer">-->
+<!--      <div class="btn-group btn-group-lg float-right">-->
+<!--        <a class="btn btn-success text-light" (click)="save()">-->
+<!--          <i class="fa fa-check"></i>-->
+<!--        </a>-->
+<!--        <a class="btn btn-warning text-light" (click)="cancel()">-->
+<!--          <i class="fa fa-undo"></i>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--end edit form-->
+<!--  </div>-->
