@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Praticien} from "../model/praticien";
+import {Praticien} from '../model/praticien';
 
 @Component({
   selector: 'app-praticien',
@@ -9,12 +9,13 @@ import {Praticien} from "../model/praticien";
 export class PraticienComponent implements OnInit {
   praticienForm: Praticien = null;
 
-  praticienModal: Formateur = null;
+  praticienModal: Praticien = null;
 
 
 
 
-  constructor() { }
+  constructor( private praticienService :praticienHttpService) { }
+
 
   ngOnInit(): void {
   }

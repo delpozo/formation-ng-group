@@ -11,7 +11,6 @@ export class PraticienServiceService {
   praticiens: Array<Praticien> = new Array<Praticien>();
 
   constructor() {
-this.praticiens.push(new Praticien(1,"sulvan","test1.", "Bouajla","Bochra","Patient","tel": "0689598552");
 
   }
   findAll(): Array<Praticien> {
