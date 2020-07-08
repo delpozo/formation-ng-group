@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {PatientComponent} from './patient/patient.component';
-import {DetailPatientComponent} from './detail-patient/detail-patient.component';
-import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './component/home/home.component';
+import {PatientComponent} from './component/patient/patient.component';
+import {DetailPatientComponent} from './component/detail-patient/detail-patient.component';
+import {LoginComponent} from './component/login/login.component';
 
 
 
