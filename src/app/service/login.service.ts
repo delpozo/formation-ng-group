@@ -30,7 +30,7 @@ export class LoginService {
             console.log(data);
             sessionStorage.setItem(USER, username);
             sessionStorage.setItem(ROLE, role);
-            sessionStorage.setItem(ID, id);
+            sessionStorage.setItem(ID, id.toString());
             return data;
           }
         )
@@ -56,6 +56,11 @@ export class LoginService {
   getRole() {
     if (this.getUserAuthenticated()) {
       return sessionStorage.getItem(ROLE);
+    }
+  }
+  getId() {
+    if (this.getUserAuthenticated()) {
+      return sessionStorage.getItem(ID);
     }
   }
 
