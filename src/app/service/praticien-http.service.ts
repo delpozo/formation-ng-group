@@ -9,7 +9,7 @@ import {Praticien} from '../model/praticien';
 export class PraticienHttpService {
 
   praticiens: Array<Praticien> = new Array<Praticien>();
-
+  baseUrl:string='http://localhost:3000/praticien/';
   constructor(private http: HttpClient) {
     this.load();
   }
@@ -19,31 +19,31 @@ export class PraticienHttpService {
   }
 
   find(id: number): Observable<Praticien> {
-    return this.http.get<Praticien>('http://localhost:3000/praticiens/' + id);
+    return this.http.get<Praticien>(this.baseUrl + id);
   }
 
   create(praticien: Praticien) {
-    return this.http.post<Praticien>('http://localhost:3000/praticiens', praticien).subscribe(resp => {
+    return this.http.post<Praticien>(this.baseUrl, praticien).subscribe(resp => {
       this.load();
     }, error => console.log(error));
   }
 
   update(praticien: Praticien) {
-    return this.http.put<Praticien>('http://localhost:3000/praticiens/' + praticien.id, praticien).subscribe(resp => {
+    return this.http.put<Praticien>(this.baseUrl + praticien.id, praticien).subscribe(resp => {
       this.load();
     }, error => console.log(error));
   }
 
   remove(id: number) {
-    return this.http.delete<void>('http://localhost:3000/praticiens/' + id).subscribe(resp => {
+    return this.http.delete<void>(this.baseUrl + id).subscribe(resp => {
       this.load();
     }, error => console.log(error));
   }
 
   load() {
-    this.http.get<Array<Praticien>>('http://localhost:3000/praticien').subscribe(resp => {
+    this.http.get<Array<Praticien>>(this.baseUrl).subscribe(resp => {
       this.praticiens = resp;
-      console.log(JSON.stringify(resp));
+
     }, error => console.log(error));
   }
 }

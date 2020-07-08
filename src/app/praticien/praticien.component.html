@@ -10,9 +10,9 @@
         <th>Nom</th>
         <th>Prénom</th>
         <th>télephone</th>
-        <th>Adresse</th>
         <th>Spécialité</th>
         <th>Tarif</th>
+        <th>Adresse</th>
         <th></th>
       </tr>
       </thead>
@@ -23,7 +23,7 @@
         <td>{{praticien.prenom}}</td>
         <td>{{praticien.tel}}</td>
         <td>{{praticien.specialite}}</td>
-        <td>{{praticien.tarif}}</td>
+        <td>{{praticien.tarif | currency:'EUR'}}</td>
         <td>{{praticien.adresse?.rue}} {{praticien.adresse?.complement}}<br/>
           {{praticien.adresse?.codePostal}} {{praticien.adresse?.ville}}<br/>
           {{praticien.adresse?.pays}}</td>
@@ -40,7 +40,11 @@
 
 
 
-
+    <div class="card-footer">
+      <a class="btn btn-success btn-lg" (click)="add()">
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
 
 
 
@@ -73,13 +77,13 @@
       <div class="form-group">
         <label for="tarif" class="col-sm-2 control-label">Tarif</label>
         <div class="col-sm-2">
-          <select class="form-control inputstl" id="tarif">
-            <option>25€</option>
-            <option>30€</option>
-            <option>40€</option>
-            <option>50€</option>
-            <option>60€</option>
-            <option>70€</option>
+          <select class="form-control inputstl" id="tarif" [(ngModel)]="praticienForm.tarif">
+            <option [value]="25">25€</option>
+            <option [value]="30">30€</option>
+            <option [value]="40">40€</option>
+            <option [value]="50">50€</option>
+            <option [value]="60">60€</option>
+            <option [value]="70">70€</option>
           </select>
 
         </div>

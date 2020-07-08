@@ -1,146 +1,142 @@
 {
-  "patient":[
+  "patient": [
     {
-      "id":1,
-      "nom":"Bouajla",
-      "prenom":"Bochra",
-      "username":"bochra",
-      "pwd":"bouajla",
-      "role":"patient"
+      "id": 1,
+      "nom": "Bouajla",
+      "prenom": "Bochra",
+      "username": "bochra",
+      "pwd": "bouajla",
+      "role": "patient"
     },
     {
-      "id":2,
-      "nom":"Bahri",
-      "prenom":"Sayf",
-      "username":"sayf",
-      "pwd":"bahri",
-      "role":"patient"
+      "id": 2,
+      "nom": "Bahri",
+      "prenom": "Sayf",
+      "username": "sayf",
+      "pwd": "bahri",
+      "role": "patient"
     },
     {
-      "id":3,
-      "nom":"Abdejlil",
-      "prenom":"Skander",
-      "username":"skander",
-      "pwd":"abdeljelil",
-      "role":"patient"
+      "id": 3,
+      "nom": "Abdejlil",
+      "prenom": "Skander",
+      "username": "skander",
+      "pwd": "abdeljelil",
+      "role": "patient"
     },
     {
-      "id":4,
-      "nom":"Moreau",
-      "prenom":"Virgil",
-      "username":"virgil",
-      "pwd":"moreau",
-      "role":"patient"
+      "id": 4,
+      "nom": "Moreau",
+      "prenom": "Virgil",
+      "username": "virgil",
+      "pwd": "moreau",
+      "role": "patient"
     }
   ],
-  "praticien":[
+  "praticien": [
     {
-      "id":1,
-      "nom":"Sulvan",
-      "prenom":"Thierry",
-      "username":"thierry",
-      "pwd":"sulvan",
-      "tel":"0125252525",
-      "specialite":"Chirurgien-dentiste",
-      "tarif":"30",
-      "role":"praticien",
-      "adresse":{
-        "rue":"3 Boulevard Charles de Gaulle,",
-        "complement":"",
-        "codePostal":" 92700 ",
-        "ville":"Paris",
-        "pays":"France"
+      "id": 2,
+      "nom": "Aaserud",
+      "prenom": "Mia",
+      "username": "mia",
+      "pwd": "aaserud",
+      "tel": "0125252526",
+      "specialite": "Ostéopathe",
+      "tarif": "70",
+      "role": "praticien",
+      "adresse": {
+        "rue": "2 rue Douet Garnier,",
+        "complement": "",
+        "codePostal": " 75000 ",
+        "ville": "Paris",
+        "pays": "France"
       }
     },
     {
-      "id":2,
-      "nom":"Aaserud",
-      "prenom":"Mia",
-      "username":"mia",
-      "pwd":"aaserud",
-      "tel":"0125252526",
-      "specialite":"Ostéopathe",
-      "tarif":"30",
-      "role":"praticien",
-      "adresse":{
-        "rue":"2 rue Douet Garnier,",
-        "complement":"",
-        "codePostal":" 75000 ",
-        "ville":"Paris",
-        "pays":"France"
+      "id": 3,
+      "nom": "Ababei",
+      "prenom": "philipe",
+      "username": "philipe",
+      "pwd": "ababei",
+      "tel": "0125252527",
+      "specialite": "Psychiatre",
+      "tarif": "60",
+      "role": "praticien",
+      "adresse": {
+        "rue": "29 Rue D Avron,",
+        "complement": "",
+        "codePostal": " 75020 ",
+        "ville": "Paris",
+        "pays": "France"
       }
     },
     {
-      "id":3,
-      "nom":"Ababei",
-      "prenom":"philipe",
-      "username":"philipe",
-      "pwd":"ababei",
-      "tel":"0125252527",
-      "specialite":"Psychiatre",
-      "tarif":"60",
-      "role":"praticien",
-      "adresse":{
-        "rue":"29 Rue D Avron,",
-        "complement":"",
-        "codePostal":" 75020 ",
-        "ville":"Paris",
-        "pays":"France"
+      "id": 4,
+      "nom": "Abad",
+      "prenom": "Richard",
+      "username": "richard",
+      "pwd": "abad",
+      "tel": "0125252528",
+      "specialite": "Masseur-kinésithérapeute",
+      "tarif": "60",
+      "role": "praticien",
+      "adresse": {
+        "rue": "16 Avenue de la Résistance,",
+        "complement": "",
+        "codePostal": " 77500 ",
+        "ville": "Paris",
+        "pays": "France"
       }
     },
     {
-      "id":4,
-      "nom":"Abad",
-      "prenom":"Richard",
-      "username":"richard",
-      "pwd":"abad",
-      "tel":"0125252528",
-      "specialite":"Masseur-kinésithérapeute",
-      "tarif":"60",
-      "role":"praticien",
-      "adresse":{
-        "rue":"16 Avenue de la Résistance,",
-        "complement":"",
-        "codePostal":" 77500 ",
-        "ville":"Paris",
-        "pays":"France"
-      }
+      "nom": "azerrr",
+      "prenom": "ttt",
+      "specialite": "chirugien",
+      "adresse": {
+        "rue": "12 rue de la paix",
+        "codePostal": "75000",
+        "ville": "paris",
+        "pays": "france"
+      },
+      "tarif": "30",
+      "tel": 20201456,
+      "id": 5
     }
   ],
-  "admin":[
+  "admin": [
     {
-      "id":1,
-      "nom":"Doe",
-      "prenom":"John",
-      "username":"admin",
-      "pwd":"admin",
-      "role":"admin"
+      "id": 1,
+      "nom": "Doe",
+      "prenom": "John",
+      "username": "admin",
+      "pwd": "admin",
+      "role": "admin"
     }
   ],
-  "RDV":[
+  "RDV": [
     {
-      "id":1,
-      "motif":"Première consultation",
-      "plage":"2020-07-30",
-      "duree":"4"
+      "id": 1,
+      "motif": "Première consultation",
+      "plage": "2020-07-30",
+      "duree": "4"
     },
     {
-      "id":2,
-      "motif":"Consultation de suivi",
-      "plage":"2020-08-02",
-      "duree":2
+      "id": 2,
+      "motif": "Consultation de suivi",
+      "plage": "2020-08-02",
+      "duree": 2
     },
     {
-      "id":3,
-      "motif":"Détartrage",
-      "plage":"2020-08-10",
-      "duree":3
+      "id": 3,
+      "motif": "Détartrage",
+      "plage": "2020-08-10",
+      "duree": 3
     },
     {
-      "id":4,
-      "motif":"Urgence dentaire",
-      "plage":"2020-07-08",
-      "duree":2
+      "id": 4,
+      "motif": "Urgence dentaire",
+      "plage": "2020-07-08",
+      "duree": 2
     }
   ]
 }

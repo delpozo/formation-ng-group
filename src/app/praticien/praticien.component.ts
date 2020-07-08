@@ -19,7 +19,7 @@ export class PraticienComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.list();
+
   }
 
   list(): Array<Praticien> {
