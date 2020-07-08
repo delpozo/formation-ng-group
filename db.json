@@ -136,7 +136,7 @@
       "plage": "2020-08-10",
       "duree": 3,
       "praticien": 2,
-      "patient": 3
+      "patient": 1
     },
     {
       "id": 4,
@@ -144,7 +144,15 @@
       "plage": "2020-07-08",
       "duree": 2,
       "praticien": 2,
-      "patient": 3
+      "patient": 2
+    },
+    {
+      "id": 4,
+      "motif": "Détartrage",
+      "plage": "2020-07-18",
+      "duree": 2,
+      "praticien": 2,
+      "patient": 2
     }
   ]
 }
