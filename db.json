@@ -7,7 +7,7 @@
       "username": "BochraB",
       "tel": "0689598552",
       "email": "bouajla.bochra@gmail.com",
-      "pwd": "test1.",
+      "pwd": "test1."
 
     },
     {
@@ -17,7 +17,7 @@
       "username": "BahriS",
       "tel": "0689598553",
       "email": "bahri.s@gmail.com",
-      "pwd": "test2.",
+      "pwd": "test2."
     },
     {
       "id": 3,
@@ -26,8 +26,8 @@
       "username": "AbdejlilS",
       "tel": "0689598554",
       "email": "abdejlil.s@gmail.com",
-      "pwd": "test3.",
-    }
+      "pwd": "test3."
+    },
 {
       "id": 4,
       "nom": "moreau",
@@ -53,7 +53,7 @@
         "ville": "Paris",
         "pays": "France"
       },
-      
+
 {
       "id": 2,
       "nom": "Aaserud",
@@ -68,7 +68,7 @@
         "ville": "Paris",
         "pays": "France"
       },
-  
+
 
 {
       "id": 3,
@@ -115,28 +115,28 @@
       "motif": "premiére consultation",
       "plage": "2020-07-30",
       "duree": "13:30",
-      
+
     }
 {
       "id": 2,
       "motif": "consultation de suivie",
       "plage": "2020-08-02",
       "duree": "10:00",
-      
+
     }
 {
       "id": 3,
       "motif": "detartrage",
       "plage": "2020-08-10",
       "duree": "11:15",
-      
+
     }
 {
       "id": 4,
       "motif": "urgence dentaire",
       "plage": "2020-07-08",
       "duree": "11:15",
-      
+
     }
   ]
 }

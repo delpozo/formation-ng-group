@@ -1,0 +1,132 @@
+<div class="card mt-3">
+  <div class="card-header bg-info text-white">
+    <h2>Liste des praticiens</h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>télephone</th>
+        <th>Adresse</th>
+        <th>Spécialité</th>
+        <th>Tarif</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let praticien of list()">
+        <td>{{praticien.id}}</td>
+        <td>{{praticien.nom | uppercase}}</td>
+        <td>{{praticien.prenom}}</td>
+        <td>{{praticien.tel}}</td>
+        <td>{{praticien.specialite}}</td>
+        <td>{{praticien.tarif}}</td>
+        <td>{{praticien.adresse?.rue}} {{praticien.adresse?.complement}}<br/>
+          {{praticien.adresse?.codePostal}} {{praticien.adresse?.ville}}<br/>
+          {{praticien.adresse?.pays}}</td>
+        <td>
+          <div class="btn-group btn-group-sm">
+            <a class="btn btn-info text-light" data-toggle="modal" data-target="#myModal" (click)="modal(praticien.id)"><i class="fa fa-bars"></i></a>
+            <a class="btn btn-primary text-light" (click)="Annuler(praticien.id)"><i class="fa fa-remove " ></i></a>
+            <a class="btn btn-danger text-light" (click)="Modifier(praticien.id)"><i class="fa fa-edit " ></i></a>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="card mt-3" *ngIf="PraticienForm!=null">
+    <div class="card-header bg-info text-white">
+      <h3>Edition du praticien</h3>
+    </div>
+
+    <div class="card-body">
+
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="praticienForm.nom">
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom:</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="praticienForm.prenom">
+      </div>
+      <div class="form-group">
+        <label for="tel">Télephone:</label>
+        <input type="number" class="form-control" id="tel" [(ngModel)]="praticienForm.tel">
+      </div>
+      <div class="form-group">
+        <label for="specialite">Spécialité:</label>
+        <input type="text" class="form-control" id="specialite" [(ngModel)]="praticienForm.specialite">
+      </div>
+      <div class="form-group">
+        <label for="tarif" class="col-sm-2 control-label">Tarif</label>
+        <div class="col-sm-2">
+          <select class="form-control inputstl" id="tarif">
+            <option>25€</option>
+            <option>30€</option>
+            <option>40€</option>
+            <option>50€</option>
+            <option>60€</option>
+            <option>70€</option>
+          </select>
+
+        </div>
+      <div class="form-group">
+        <label for="rue">Rue:</label>
+        <input type="text" class="form-control" id="rue" [(ngModel)]="praticienForm.adresse.rue">
+      </div>
+      <div class="form-group">
+        <label for="complement">Complément:</label>
+        <input type="text" class="form-control" id="complement" [(ngModel)]="praticienForm.adresse.complement">
+      </div>
+      <div class="form-group">
+        <label for="codePostal">Code postal:</label>
+        <input type="text" class="form-control" id="codePostal" [(ngModel)]="praticienForm.adresse.codePostal">
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville:</label>
+        <input type="text" class="form-control" id="ville" [(ngModel)]="praticienForm.adresse.ville">
+      </div>
+      <div class="form-group">
+        <label for="pays">Pays:</label>
+        <input type="text" class="form-control" id="pays" [(ngModel)]="praticienForm.adresse.pays">
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <div class="btn-group btn-group-lg float-right">
+        <a class="btn btn-success text-light" (click)="save()">
+          <i class="fa fa-check"></i>
+        </a>
+        <a class="btn btn-warning text-light" (click)="cancel()">
+          <i class="fa fa-undo"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>

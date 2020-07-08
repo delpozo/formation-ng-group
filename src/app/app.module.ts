@@ -15,6 +15,7 @@ import { DetailParticienComponent } from './component/detail-particien/detail-pa
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { PraticienComponent } from './praticien/praticien.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {FormsModule} from '@angular/forms';
     RendezVousComponent,
     DetailRdvComponent,
     DetailPatientComponent,
-    DetailParticienComponent
+    DetailParticienComponent,
+    PraticienComponent
   ],
   imports: [
     BrowserModule,
@@ -40,3 +42,4 @@ import {FormsModule} from '@angular/forms';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
