@@ -1,4 +1,4 @@
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark" *ngIf="isLogged">
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark" *ngIf="loginService.isUserLoggedIn()">
   <a class="navbar-brand" [routerLink]="['home']">MY-DOCTOR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,40 +46,37 @@
     </ul>
 
 
+    <!--      <li class="nav-item">-->
+    <!--        <a class="nav-link" href="#">-->
+    <!--          <i class="fa fa-user-circle">-->
+    <!--            <span class="badge badge-info">11</span>-->
+    <!--          </i>-->
+    <!--          Profil-->
+    <!--        </a>-->
+    <!--      </li>-->
+    <!--      Merci d'ajouter un lien pour modifier le profil -->
 
-
-
-<!--      <li class="nav-item">-->
-<!--        <a class="nav-link" href="#">-->
-<!--          <i class="fa fa-user-circle">-->
-<!--            <span class="badge badge-info">11</span>-->
-<!--          </i>-->
-<!--          Profil-->
-<!--        </a>-->
-<!--      </li>-->
-      <!--      Merci d'ajouter un lien pour modifier le profil -->
-
-<!--    </ul>-->
+    <!--    </ul>-->
     <!--    recherche form -->
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
     </form>
     <ul class="navbar-nav ">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fa fa-user-circle">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user-circle">
+          </i>
 
-        </i>
-
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Profil</a>
-        <a class="dropdown-item" href="#"></a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Logout</a>
-      </div>
-    </li>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Profil</a>
+          <a class="dropdown-item" href="#"></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" (click)="doLogout()">Logout</a>
+        </div>
+      </li>
 
     </ul>
   </div>

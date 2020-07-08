@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LoginService} from '../../service/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   password: string = '';
   role: string = '';
 
-  constructor(private loginService: LoginService) {
+  constructor(private loginService: LoginService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -20,7 +21,10 @@ export class LoginComponent implements OnInit {
 
   doLogin() {
     this.loginService.authenticate(this.username, this.password, 'admin').subscribe(
-      data => console.log(JSON.stringify(data)),
+      data => {
+        console.log(JSON.stringify(data));
+        this.router.navigate(['/home']);
+      },
       error => console.log(error)
     );
   }
