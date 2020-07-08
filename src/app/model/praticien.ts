@@ -1,10 +1,12 @@
 import {User} from './user';
+import {Adresse} from './adresse';
 
 export class Praticien extends User {
   specialite: string;
-  adresse: string;
+  adresse: Adresse;
 
-  constructor(id: number, username: string, password: string, nom: string, prenom: string, role: string, specialite: string, adresse: string) {
+  constructor(id?: number, username?: string, password?: string, nom?: string, prenom?: string,
+              role?: string, specialite?: string, adresse?: Adresse) {
     super(id, username, password, nom, prenom, role);
     this.specialite = specialite;
     this.adresse = adresse;
