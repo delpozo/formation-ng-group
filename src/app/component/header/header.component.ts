@@ -10,13 +10,11 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   role: string = '';
-  isLogged: boolean = false;
 
   constructor(public loginService: LoginService, private router: Router) {
   }
 
   ngOnInit(): void {
-    // this.isLogged = this.loginService.isUserLoggedIn();
     this.role = this.loginService.getRole();
   }
 

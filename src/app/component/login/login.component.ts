@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ID, LoginService, ROLE, USER} from '../../service/login.service';
 import {Router} from '@angular/router';
-import {User} from '../../model/user';
 
 @Component({
   selector: 'app-login',
@@ -48,7 +47,6 @@ export class LoginComponent implements OnInit {
            );
          }*/
       },
-      error => console.log(error)
-    );
+      error => console.log(error));
   }
 }
