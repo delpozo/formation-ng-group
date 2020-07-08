@@ -1,5 +1,5 @@
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" [routerLink]="['home']" >MY-DOCTOR</a>
+  <a class="navbar-brand" [routerLink]="['home']">MY-DOCTOR</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,8 +14,8 @@
           <span class="sr-only">(current)</span>
         </a>
       </li>
-<!--      ngIf role Patient   -->
-      <li class="nav-item">
+      <!--      ngIf role Patient   -->
+      <li class="nav-item" *ngIf="role == 'patient'">
         <a class="nav-link" [routerLink]="['paticien']">
           <i class="fa fa-calendar-minus">
             <span class="badge badge-danger">11</span>
@@ -24,7 +24,7 @@
         </a>
       </li>
       <!--      ngIf role Praticien -->
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="role == 'particien'">
         <a class="nav-link" href="#">
           <i class="fa fa-calendar-minus">
             <!--          count() all rdv par praticien -->
@@ -34,17 +34,16 @@
         </a>
       </li>
       <!--      ngIf role Admin -->
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="role == 'admin'">
         <a class="nav-link" href="#">
           <i class="fa fa-calendar-minus">
             <!--          count() all rdv -->
             <span class="badge badge-warning">11</span>
           </i>
-          Liste  Rendez-vous
+          Liste Rendez-vous
         </a>
       </li>
     </ul>
-
 
 
     <ul class="navbar-nav ">
@@ -56,10 +55,10 @@
           Profil
         </a>
       </li>
-<!--      Merci d'ajouter un lien pour modifier le profil -->
+      <!--      Merci d'ajouter un lien pour modifier le profil -->
 
     </ul>
-<!--    recherche form -->
+    <!--    recherche form -->
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>

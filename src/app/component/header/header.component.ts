@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginService} from '../../service/login.service';
 
 @Component({
   selector: 'header-navbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  role: string = '';
+
+  constructor(private loginService: LoginService) {
+  }
 
   ngOnInit(): void {
+    this.role = this.loginService.getRole();
   }
 
 }
