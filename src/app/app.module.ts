@@ -14,8 +14,16 @@ import { DetailPatientComponent } from './component/detail-patient/detail-patien
 import { DetailParticienComponent } from './component/detail-particien/detail-particien.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PraticienComponent } from './praticien/praticien.component';
+import { TestAlaComponent } from './test-ala/test-ala.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { TestToSayfComponent } from './test-ala/test-to-sayf/test-to-sayf.component';
+import {MatSelectModule} from '@angular/material/select';
+import { ExpComponent } from './component/exp/exp.component';
+import { DateAgoPipe } from './date-ago.pipe';
 
 
 @NgModule({
@@ -31,13 +39,22 @@ import { PraticienComponent } from './praticien/praticien.component';
     DetailRdvComponent,
     DetailPatientComponent,
     DetailParticienComponent,
-    PraticienComponent
+    PraticienComponent,
+    TestAlaComponent,
+    TestToSayfComponent,
+    ExpComponent,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

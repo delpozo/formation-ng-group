@@ -1,0 +1,28 @@
+<p>{{nom}}</p>
+  <div *ngIf="!Submit">
+    <mat-select class="form-control" [(ngModel)]="ville" (selectionChange)="ajouterExp()">
+      <mat-option value="MO"> Monastir </mat-option>
+      <mat-option value="SA"> Sayada </mat-option>
+      <mat-option value="KH"> KH </mat-option>
+      <mat-option value="MOK"> Moknine </mat-option>
+    </mat-select>
+  </div>
+    <div class="table" *ngIf="Submit">
+      <table class="table-responsive">
+        <thead>
+          <th>Nom</th>
+          <th>Ville</th>
+          <th>Date Création</th>
+          <th>Mise à jour</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let exp of Exps">
+            <td>{{exp.nom}}</td>
+            <td>{{exp.ville}}</td>
+            <td>{{exp.createdAt | dateAgo}}</td>
+            <td>{{exp.updateAt | dateAgo}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+

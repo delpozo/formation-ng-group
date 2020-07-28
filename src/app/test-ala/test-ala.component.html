@@ -1,0 +1,25 @@
+<form [formGroup]="Form1">
+  <div class="container" *ngIf="entete">
+    <div class="form-group">
+      <h3 *ngIf="hasFormErrors"> Error</h3>
+      <mat-form-field  class="example-full-width">
+        <input matInput placeholder="Nom" formControlName="nom">
+        <mat-error>
+          Nom est
+          <strong>Obligatoire Entre 4 - 15 </strong>
+        </mat-error>
+        <!--<mat-hint align="start">Entrez
+          <strong>Nom</strong>
+        </mat-hint>-->
+      </mat-form-field>
+      <input type="button" value="OK" (click)="OK()">
+    </div>
+    <div class="form-group">
+      <p>{{nom}}</p>
+    </div>
+  </div>
+</form>
+
+<div *ngIf="Submit">
+  <app-test-to-sayf [nom]="nom"></app-test-to-sayf>
+</div>

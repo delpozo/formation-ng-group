@@ -170,5 +170,56 @@
       "praticien": 2,
       "id": 6
     }
+  ],
+  "Exp": [
+    {
+      "nom": "sayf 1",
+      "ville": "KH",
+      "createdAt": "2020-07-28T14:14:01.993Z",
+      "updateAt": "2020-07-28T14:14:01.993Z",
+      "id": 1
+    },
+    {
+      "nom": "sayf 1",
+      "ville": "MOK",
+      "createdAt": "2020-07-28T14:14:41.921Z",
+      "updateAt": "2020-07-28T14:14:41.921Z",
+      "id": 2
+    },
+    {
+      "nom": "sayf 1",
+      "ville": "KH",
+      "createdAt": "2020-07-28T14:22:01.520Z",
+      "updateAt": "2020-07-28T14:22:01.520Z",
+      "id": 3
+    },
+    {
+      "nom": "sayf 1",
+      "ville": "MO",
+      "createdAt": "2020-07-28T14:25:06.663Z",
+      "updateAt": "2020-07-28T14:25:06.663Z",
+      "id": 4
+    },
+    {
+      "nom": "AlaEddine",
+      "ville": "MOK",
+      "createdAt": "2020-07-28T14:26:20.243Z",
+      "updateAt": "2020-07-28T14:26:20.243Z",
+      "id": 5
+    },
+    {
+      "nom": "AlaEdd",
+      "ville": "KH",
+      "createdAt": "2020-07-28T14:27:44.202Z",
+      "updateAt": "2020-07-28T14:27:44.202Z",
+      "id": 6
+    },
+    {
+      "nom": "SAYF",
+      "ville": "SA",
+      "createdAt": "2020-07-28T14:33:00.016Z",
+      "updateAt": "2020-07-28T14:33:00.016Z",
+      "id": 7
+    }
   ]
 }
